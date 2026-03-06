@@ -30,7 +30,11 @@ export function DisputeTable({ items }: DisputeTableProps) {
               <tr key={item.id}>
                 <td>
                   <p className="font-medium text-neutral-900">{item.relatedName}</p>
+<<<<<<< codex/develop-web-product-proposal-for-bamboo-industry-tavjxs
                   <p className="mt-1 text-sm text-neutral-500">关联编号：{item.relatedRef}</p>
+=======
+                  <p className="mt-1 text-xs text-neutral-500">关联编号：{item.relatedRef}</p>
+>>>>>>> main
                 </td>
                 <td>{item.disputeType}</td>
                 <td>{item.initiator}</td>
