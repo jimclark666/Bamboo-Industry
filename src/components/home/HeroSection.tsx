@@ -28,20 +28,20 @@ export function HeroSection() {
         <div className={`${homeStyles.cardStrong} ${homeStyles.cardBody} grid gap-4`}>
           <div className={`${homeStyles.metricPanel} p-4`}>
             <div className="mb-3 flex items-center justify-between">
-              <p className="text-xs font-medium tracking-wide text-neutral-500">协作运行概览</p>
+              <p className="text-sm font-medium tracking-wide text-neutral-500">协作运行概览</p>
               <StatusTag label="稳定" tone="success" size="sm" />
             </div>
             <div className="grid gap-3 sm:grid-cols-3">
               <div>
-                <p className="text-xs text-neutral-500">活跃协作任务</p>
+                <p className="text-sm text-neutral-500">活跃协作任务</p>
                 <p className="mt-1 text-[30px] leading-[34px] font-semibold text-neutral-900">128</p>
               </div>
               <div>
-                <p className="text-xs text-neutral-500">待处理询价</p>
+                <p className="text-sm text-neutral-500">待处理询价</p>
                 <p className="mt-1 text-[30px] leading-[34px] font-semibold text-neutral-900">24</p>
               </div>
               <div>
-                <p className="text-xs text-neutral-500">履约跟踪中</p>
+                <p className="text-sm text-neutral-500">履约跟踪中</p>
                 <p className="mt-1 text-[30px] leading-[34px] font-semibold text-neutral-900">31</p>
               </div>
             </div>
@@ -49,7 +49,7 @@ export function HeroSection() {
 
           <div className="grid gap-3">
             <div className={`${homeStyles.subtlePanel} p-4`}>
-              <p className="text-xs font-medium tracking-wide text-neutral-500">协作节点摘要</p>
+              <p className="text-sm font-medium tracking-wide text-neutral-500">协作节点摘要</p>
               <div className="mt-3 grid gap-2 text-sm leading-6 text-neutral-700">
                 <p>资源信息确认 → 询价条款确认</p>
                 <p>订单状态更新 → 履约凭证留存</p>
@@ -57,7 +57,7 @@ export function HeroSection() {
               </div>
             </div>
             <div className="rounded-md border border-brand-100 bg-brand-100 p-4 shadow-sm">
-              <p className="text-xs font-medium tracking-wide text-neutral-700">协作原则</p>
+              <p className="text-sm font-medium tracking-wide text-neutral-700">协作原则</p>
               <p className="mt-1 text-sm leading-6 text-neutral-900">以规则透明、节点留痕和责任明确为基础，保障跨主体交易协作稳定推进。</p>
             </div>
           </div>

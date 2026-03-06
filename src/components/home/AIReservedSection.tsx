@@ -14,7 +14,7 @@ export function AIReservedSection() {
         <div className="grid gap-3 md:grid-cols-3">
           {HOME_AI_RESERVED.points.map((point, index) => (
             <div className="rounded-md border border-neutral-300 bg-neutral-100 p-4" key={point}>
-              <p className="text-xs text-neutral-500">方向 {index + 1}</p>
+              <p className="text-sm text-neutral-500">方向 {index + 1}</p>
               <p className="mt-2 text-sm leading-6 text-neutral-800">{point}</p>
             </div>
           ))}

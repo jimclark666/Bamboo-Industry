@@ -40,7 +40,7 @@ export function TopNav({ items, sticky = true, showAuthActions = true }: TopNavP
           </Link>
           <nav className="hidden items-center gap-7 md:flex">
             {items.map((item) => (
-              <Link className="text-[15px] font-medium text-neutral-700 transition-colors hover:text-brand-600" href={item.href} key={item.href}>
+              <Link className="text-base font-medium text-neutral-700 transition-colors hover:text-brand-600" href={item.href} key={item.href}>
                 {item.label}
               </Link>
             ))}

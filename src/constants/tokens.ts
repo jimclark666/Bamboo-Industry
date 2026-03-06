@@ -1,18 +1,31 @@
 export const TOKENS = {
   color: {
+<<<<<<< codex/develop-web-product-proposal-for-bamboo-industry-tavjxs
+    brand600: '#4F7666',
+    brand500: '#5F8A79',
+    brand100: '#DCEDE5',
+=======
     brand600: '#5F7F72',
     brand500: '#6F8F82',
     brand100: '#EAF1EE',
+>>>>>>> main
     neutral900: '#1F2A24',
     neutral700: '#4B5A52',
     neutral500: '#8A978F',
     neutral300: '#D7DED9',
     neutral100: '#F6F8F7',
     white: '#FFFFFF',
+<<<<<<< codex/develop-web-product-proposal-for-bamboo-industry-tavjxs
+    stateSuccess: '#3F6F58',
+    stateWarning: '#9A7C4A',
+    stateDanger: '#A05A5A',
+    stateInfo: '#4C6E7F'
+=======
     stateSuccess: '#4F7A61',
     stateWarning: '#9A7C4A',
     stateDanger: '#A05A5A',
     stateInfo: '#5E7485'
+>>>>>>> main
   },
   radius: {
     sm: '8px',

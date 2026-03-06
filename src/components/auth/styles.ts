@@ -27,5 +27,5 @@ export const authStyles = {
   roleCard:
     'cursor-pointer rounded-md border border-neutral-300 bg-neutral-100 p-3 transition-colors hover:border-brand-500 hover:bg-brand-100/60',
   roleTitle: 'text-sm font-semibold text-neutral-900',
-  roleDesc: 'mt-1 text-xs leading-5 text-neutral-700'
+  roleDesc: 'mt-1 text-sm leading-6 text-neutral-700'
 } as const;
