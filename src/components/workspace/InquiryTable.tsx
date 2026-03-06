@@ -8,9 +8,7 @@ type InquiryTableProps = {
   items: readonly InquiryRecord[];
 };
 
-const canEnterFulfillment = (status: InquiryRecord['status']) => {
-  return status === '已报价' || status === '待确认';
-};
+const canEnterFulfillment = (status: InquiryRecord['status']) => status === '已报价' || status === '待确认';
 
 export function InquiryTable({ items }: InquiryTableProps) {
   return (
@@ -35,8 +33,6 @@ export function InquiryTable({ items }: InquiryTableProps) {
                 <td>
                   <p className="font-medium text-neutral-900">{item.resourceName}</p>
                   <p className="mt-1 text-sm text-neutral-500">编号：{item.id}</p>
-                  <p className="mt-1 text-sm text-neutral-500">编号：{item.id}</p>
-main
                 </td>
                 <td>{item.initiator}</td>
                 <td>{item.counterparty}</td>
@@ -54,8 +50,6 @@ main
                       </Link>
                     ) : (
                       <span className="text-sm text-neutral-500">待报价确认后可进入履约</span>
-                      <span className="text-sm text-neutral-500">待报价确认后可进入履约</span>
-main
                     )}
                   </div>
                 </td>

@@ -3,10 +3,6 @@ export const TOKENS = {
     brand600: '#4F7666',
     brand500: '#5F8A79',
     brand100: '#DCEDE5',
-    brand600: '#4F7666',
-    brand500: '#5F8A79',
-    brand100: '#DCEDE5',
-main
     neutral900: '#1F2A24',
     neutral700: '#4B5A52',
     neutral500: '#8A978F',
@@ -17,7 +13,6 @@ main
     stateWarning: '#9A7C4A',
     stateDanger: '#A05A5A',
     stateInfo: '#4C6E7F'
-main
   },
   radius: {
     sm: '8px',
