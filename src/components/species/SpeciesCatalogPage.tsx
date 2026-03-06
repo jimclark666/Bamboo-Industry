@@ -13,11 +13,15 @@ import {
   SPECIES_USAGE_OPTIONS
 } from '@/constants/species';
 
+type RegionFilter = (typeof SPECIES_REGION_OPTIONS)[number];
+type UsageFilter = (typeof SPECIES_USAGE_OPTIONS)[number];
+type SpeciesTypeFilter = (typeof SPECIES_TYPE_OPTIONS)[number];
+
 export function SpeciesCatalogPage() {
   const [keyword, setKeyword] = useState('');
-  const [region, setRegion] = useState('全部产区');
-  const [usage, setUsage] = useState('全部用途');
-  const [speciesType, setSpeciesType] = useState('全部类型');
+  const [region, setRegion] = useState<RegionFilter>('全部产区');
+  const [usage, setUsage] = useState<UsageFilter>('全部用途');
+  const [speciesType, setSpeciesType] = useState<SpeciesTypeFilter>('全部类型');
 
   const filteredRecords = useMemo(() => {
     return SPECIES_RECORDS.filter((item) => {
@@ -27,9 +31,9 @@ export function SpeciesCatalogPage() {
         item.name.includes(normalizedKeyword) ||
         item.scenario.includes(normalizedKeyword) ||
         item.featureSummary.includes(normalizedKeyword);
-      const matchRegion = region === '全部产区' || item.mainRegions.includes(region);
-      const matchUsage = usage === '全部用途' || item.usage === usage;
-      const matchType = speciesType === '全部类型' || item.type === speciesType;
+      const matchRegion = region === '全部产区' ? true : item.mainRegions.includes(region);
+      const matchUsage = usage === '全部用途' ? true : item.usage === usage;
+      const matchType = speciesType === '全部类型' ? true : item.type === speciesType;
       return matchKeyword && matchRegion && matchUsage && matchType;
     });
   }, [keyword, region, usage, speciesType]);
@@ -57,7 +61,7 @@ export function SpeciesCatalogPage() {
               <select
                 className="h-10 rounded-md border border-neutral-300 bg-white px-3 text-base text-neutral-900 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-100"
                 value={region}
-                onChange={(event) => setRegion(event.target.value)}
+                onChange={(event) => setRegion(event.target.value as RegionFilter)}
               >
                 {SPECIES_REGION_OPTIONS.map((option) => (
                   <option key={option} value={option}>
@@ -71,7 +75,7 @@ export function SpeciesCatalogPage() {
               <select
                 className="h-10 rounded-md border border-neutral-300 bg-white px-3 text-base text-neutral-900 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-100"
                 value={usage}
-                onChange={(event) => setUsage(event.target.value)}
+                onChange={(event) => setUsage(event.target.value as UsageFilter)}
               >
                 {SPECIES_USAGE_OPTIONS.map((option) => (
                   <option key={option} value={option}>
@@ -85,7 +89,7 @@ export function SpeciesCatalogPage() {
               <select
                 className="h-10 rounded-md border border-neutral-300 bg-white px-3 text-base text-neutral-900 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-100"
                 value={speciesType}
-                onChange={(event) => setSpeciesType(event.target.value)}
+                onChange={(event) => setSpeciesType(event.target.value as SpeciesTypeFilter)}
               >
                 {SPECIES_TYPE_OPTIONS.map((option) => (
                   <option key={option} value={option}>
