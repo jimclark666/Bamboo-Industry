@@ -5,7 +5,7 @@ export function SecondaryButton(props: ButtonBaseProps) {
   return (
     <ButtonBase
       {...props}
-      variantClass="border-neutral-300 bg-white text-neutral-900 hover:border-brand-500 hover:text-brand-600"
+      variantClass="border-neutral-300 bg-white text-neutral-900 hover:border-brand-600 hover:text-brand-600"
     />
   );
 }

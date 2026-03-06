@@ -6,7 +6,7 @@ import { homeStyles } from './styles';
 export function AIReservedSection() {
   return (
     <SectionBlock title={HOME_AI_RESERVED.title} description={HOME_AI_RESERVED.description} className={homeStyles.section}>
-      <div className={`${homeStyles.card} ${homeStyles.cardBody}`}>
+      <div className={`${homeStyles.cardStrong} ${homeStyles.cardBody}`}>
         <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
           <StatusTag label="能力路线" tone="success" />
           <p className="text-sm text-neutral-700">以可解释推荐与人工复核机制提升协作效率</p>

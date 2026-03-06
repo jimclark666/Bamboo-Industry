@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --color-brand-600: #5f7f72;
-  --color-brand-500: #6f8f82;
-  --color-brand-100: #eaf1ee;
+  --color-brand-600: #4f7666;
+  --color-brand-500: #5f8777;
+  --color-brand-100: #dfece5;
 
   --color-neutral-900: #1f2a24;
   --color-neutral-700: #4b5a52;
@@ -14,10 +14,10 @@
   --color-neutral-100: #f6f8f7;
   --color-white: #ffffff;
 
-  --color-state-success: #4f7a61;
+  --color-state-success: #3f6f58;
   --color-state-warning: #9a7c4a;
   --color-state-danger: #a05a5a;
-  --color-state-info: #5e7485;
+  --color-state-info: #49697a;
 
   --font-size-h1: 36px;
   --font-size-h2: 28px;
@@ -89,5 +89,5 @@ a {
 }
 
 main {
-  min-height: calc(100vh - 64px - 300px);
+  min-height: calc(100vh - 72px - 300px);
 }

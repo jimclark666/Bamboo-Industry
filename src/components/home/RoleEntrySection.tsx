@@ -21,7 +21,7 @@ export function RoleEntrySection() {
     >
       <div className="grid gap-4 md:grid-cols-3">
         {HOME_ROLE_ITEMS.map((item) => (
-          <article className={`${homeStyles.card} ${homeStyles.cardBody} flex h-full flex-col`} key={item.role}>
+          <article className={`${homeStyles.cardStrong} ${homeStyles.cardBody} flex h-full flex-col`} key={item.role}>
             <div className="mb-3">
               <StatusTag label={item.role} tone={roleToneMap[item.role]} size="sm" />
             </div>

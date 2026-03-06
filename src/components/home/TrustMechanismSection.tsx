@@ -12,7 +12,7 @@ export function TrustMechanismSection() {
       className={homeStyles.section}
       descriptionClassName={homeStyles.sectionDescription}
     >
-      <div className={`${homeStyles.card} ${homeStyles.cardBody}`}>
+      <div className={`${homeStyles.cardStrong} ${homeStyles.cardBody}`}>
         <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
           <p className="text-sm text-neutral-700">核心机制覆盖交易协作关键节点</p>
           <StatusTag label="规则化协作" tone="info" />

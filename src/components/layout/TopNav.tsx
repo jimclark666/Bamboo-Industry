@@ -29,24 +29,24 @@ export function TopNav({ items, sticky = true, showAuthActions = true }: TopNavP
     <header
       className={cn(
         sticky && 'sticky top-0 z-40',
-        'border-b border-transparent transition-all',
-        scrolled ? 'bg-white/95 shadow-sm backdrop-blur border-neutral-300/70' : 'bg-neutral-100/80'
+        'border-b border-transparent transition-all duration-200',
+        scrolled ? 'bg-white/96 shadow-sm backdrop-blur border-neutral-300/80' : 'bg-neutral-100/92'
       )}
     >
       <PageContainer>
-        <div className="flex h-16 items-center justify-between gap-4">
-          <Link className="text-lg font-semibold text-neutral-900" href="/">
+        <div className="flex h-[72px] items-center justify-between gap-6">
+          <Link className="text-[24px] leading-none font-semibold tracking-tight text-neutral-900" href="/">
             {SITE_NAME}
           </Link>
-          <nav className="hidden items-center gap-6 md:flex">
+          <nav className="hidden items-center gap-7 md:flex">
             {items.map((item) => (
-              <Link className="text-sm text-neutral-700 hover:text-neutral-900" href={item.href} key={item.href}>
+              <Link className="text-[15px] font-medium text-neutral-700 transition-colors hover:text-brand-600" href={item.href} key={item.href}>
                 {item.label}
               </Link>
             ))}
           </nav>
           {showAuthActions && (
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2.5">
               <SecondaryButton href="/login" size="sm">
                 登录
               </SecondaryButton>

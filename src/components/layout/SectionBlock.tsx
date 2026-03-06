@@ -21,12 +21,12 @@ export function SectionBlock({
   descriptionClassName
 }: SectionBlockProps) {
   return (
-    <section id={id} className={cn('py-10 md:py-12 lg:py-16', className)}>
+    <section id={id} className={cn('py-10 md:py-14 lg:py-16', className)}>
       {(title || description) && (
-        <header className={cn('mb-6 md:mb-8', headerClassName)}>
-          {title && <h2 className="text-[28px] leading-[36px] font-semibold text-neutral-900">{title}</h2>}
+        <header className={cn('mb-6 md:mb-9', headerClassName)}>
+          {title && <h2 className="text-[28px] leading-[36px] font-semibold text-neutral-900 md:text-[30px] md:leading-[40px]">{title}</h2>}
           {description && (
-            <p className={cn('mt-3 text-sm leading-[22px] text-neutral-700', descriptionClassName)}>{description}</p>
+            <p className={cn('mt-3 max-w-3xl text-sm leading-[22px] text-neutral-700', descriptionClassName)}>{description}</p>
           )}
         </header>
       )}

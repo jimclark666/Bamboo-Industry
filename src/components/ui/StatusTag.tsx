@@ -9,11 +9,11 @@ type StatusTagProps = {
 };
 
 const toneClassMap: Record<StatusTagTone, string> = {
-  neutral: 'bg-neutral-100 text-neutral-700 border-neutral-300',
-  success: 'bg-[#edf4ef] text-[#446b56] border-[#c8dbcf]',
-  warning: 'bg-[#f8f3e8] text-[#84663a] border-[#e5d6b7]',
-  danger: 'bg-[#f8eded] text-[#8f4d4d] border-[#e5c8c8]',
-  info: 'bg-[#edf2f6] text-[#4f6678] border-[#c8d5de]'
+  neutral: 'border-neutral-300 bg-neutral-100 text-neutral-700',
+  success: 'border-[#bed7c8] bg-[#e8f4ee] text-[#2f6b4e]',
+  warning: 'border-[#ead9b8] bg-[#fbf5e8] text-[#7c5f31]',
+  danger: 'border-[#ebc7c7] bg-[#fbeeee] text-[#8c3f3f]',
+  info: 'border-[#c0d5cc] bg-[#e8f1ee] text-[#355f4d]'
 };
 
 const sizeClassMap = {

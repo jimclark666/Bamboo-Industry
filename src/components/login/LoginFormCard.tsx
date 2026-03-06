@@ -1,19 +1,21 @@
 'use client';
 
+import { AuthSwitchHint } from '@/components/auth/AuthSwitchHint';
+import { authStyles } from '@/components/auth/styles';
 import { PrimaryButton } from '@/components/ui/PrimaryButton';
 import { TextButton } from '@/components/ui/TextButton';
 import { LOGIN_COPY } from '@/constants/login';
 
 export function LoginFormCard() {
   return (
-    <section className="rounded-lg border border-neutral-300 bg-white p-5 shadow-sm md:p-6">
-      <form className="grid gap-4" onSubmit={(e) => e.preventDefault()}>
+    <section className={authStyles.panelCard}>
+      <form className={authStyles.formGrid} onSubmit={(e) => e.preventDefault()}>
         <div>
-          <label className="mb-2 block text-sm font-medium text-neutral-900" htmlFor="account">
+          <label className={authStyles.formLabel} htmlFor="account">
             {LOGIN_COPY.form.accountLabel}
           </label>
           <input
-            className="h-11 w-full rounded-md border border-neutral-300 bg-white px-3 text-sm text-neutral-900 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20"
+            className={authStyles.field}
             id="account"
             name="account"
             placeholder={LOGIN_COPY.form.accountPlaceholder}
@@ -22,11 +24,11 @@ export function LoginFormCard() {
         </div>
 
         <div>
-          <label className="mb-2 block text-sm font-medium text-neutral-900" htmlFor="password">
+          <label className={authStyles.formLabel} htmlFor="password">
             {LOGIN_COPY.form.passwordLabel}
           </label>
           <input
-            className="h-11 w-full rounded-md border border-neutral-300 bg-white px-3 text-sm text-neutral-900 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20"
+            className={authStyles.field}
             id="password"
             name="password"
             placeholder={LOGIN_COPY.form.passwordPlaceholder}
@@ -34,7 +36,7 @@ export function LoginFormCard() {
           />
         </div>
 
-        <div className="flex flex-wrap items-center justify-between gap-2">
+        <div className={authStyles.helperRow}>
           <label className="inline-flex items-center gap-2 text-sm text-neutral-700" htmlFor="remember">
             <input className="h-4 w-4 rounded border-neutral-300 text-brand-600 focus:ring-brand-500/30" id="remember" type="checkbox" />
             {LOGIN_COPY.form.remember}
@@ -47,12 +49,7 @@ export function LoginFormCard() {
         </PrimaryButton>
       </form>
 
-      <div className="mt-5 border-t border-neutral-300 pt-4">
-        <p className="text-sm text-neutral-700">
-          {LOGIN_COPY.registerHint}{' '}
-          <TextButton href="/register">{LOGIN_COPY.registerAction}</TextButton>
-        </p>
-      </div>
+      <AuthSwitchHint actionLabel={LOGIN_COPY.registerAction} hint={LOGIN_COPY.registerHint} href="/register" />
     </section>
   );
 }
