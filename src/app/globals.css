@@ -4,13 +4,11 @@
 
 :root {
   --color-brand-600: #4f7666;
-<<<<<<< codex/develop-web-product-proposal-for-bamboo-industry-tavjxs
   --color-brand-500: #5f8a79;
   --color-brand-100: #dcede5;
-=======
-  --color-brand-500: #5f8777;
-  --color-brand-100: #dfece5;
->>>>>>> main
+  --color-brand-500: #5f8a79;
+  --color-brand-100: #dcede5;
+main
 
   --color-neutral-900: #1f2a24;
   --color-neutral-700: #4b5a52;
@@ -22,35 +20,29 @@
   --color-state-success: #3f6f58;
   --color-state-warning: #9a7c4a;
   --color-state-danger: #a05a5a;
-<<<<<<< codex/develop-web-product-proposal-for-bamboo-industry-tavjxs
   --color-state-info: #4c6e7f;
-=======
-  --color-state-info: #49697a;
->>>>>>> main
+  --color-state-info: #4c6e7f;
+main
 
   --font-size-h1: 36px;
   --font-size-h2: 28px;
   --font-size-h3: 22px;
   --font-size-body-lg: 16px;
-<<<<<<< codex/develop-web-product-proposal-for-bamboo-industry-tavjxs
   --font-size-body-md: 15px;
   --font-size-caption: 13px;
-=======
-  --font-size-body-md: 14px;
-  --font-size-caption: 12px;
->>>>>>> main
+  --font-size-body-md: 15px;
+  --font-size-caption: 13px;
+main
 
   --line-height-h1: 44px;
   --line-height-h2: 36px;
   --line-height-h3: 30px;
   --line-height-body-lg: 26px;
-<<<<<<< codex/develop-web-product-proposal-for-bamboo-industry-tavjxs
   --line-height-body-md: 24px;
   --line-height-caption: 20px;
-=======
-  --line-height-body-md: 22px;
-  --line-height-caption: 18px;
->>>>>>> main
+  --line-height-body-md: 24px;
+  --line-height-caption: 20px;
+main
 
   --space-2: 8px;
   --space-3: 12px;

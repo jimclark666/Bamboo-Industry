@@ -30,11 +30,9 @@ export function GovernanceTable({ items }: GovernanceTableProps) {
               <tr key={item.id}>
                 <td>
                   <p className="font-medium text-neutral-900">{item.subjectName}</p>
-<<<<<<< codex/develop-web-product-proposal-for-bamboo-industry-tavjxs
                   <p className="mt-1 text-sm text-neutral-500">主体编号：{item.id}</p>
-=======
-                  <p className="mt-1 text-xs text-neutral-500">主体编号：{item.id}</p>
->>>>>>> main
+                  <p className="mt-1 text-sm text-neutral-500">主体编号：{item.id}</p>
+main
                 </td>
                 <td>{item.subjectType}</td>
                 <td>
@@ -61,9 +59,7 @@ export function GovernanceTable({ items }: GovernanceTableProps) {
           </tbody>
         </table>
       </div>
-      {items.length === 0 && (
-        <p className={workspaceStyles.tableEmpty}>{WORKSPACE_EMPTY_TEXT.filtered}</p>
-      )}
+      {items.length === 0 ? <p className={workspaceStyles.tableEmpty}>{WORKSPACE_EMPTY_TEXT.filtered}</p> : null}
     </section>
   );
 }

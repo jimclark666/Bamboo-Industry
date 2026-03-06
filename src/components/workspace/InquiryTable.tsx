@@ -1,14 +1,16 @@
 import Link from 'next/link';
 import { WORKSPACE_EMPTY_TEXT } from '@/constants/workspace';
 import type { InquiryRecord } from '@/constants/workspace';
-import { workspaceStyles } from './styles';
 import { InquiryStatusTag } from './InquiryStatusTag';
+import { workspaceStyles } from './styles';
 
 type InquiryTableProps = {
   items: readonly InquiryRecord[];
 };
 
-const canEnterFulfillment = (status: InquiryRecord['status']) => status === '已报价' || status === '待确认';
+const canEnterFulfillment = (status: InquiryRecord['status']) => {
+  return status === '已报价' || status === '待确认';
+};
 
 export function InquiryTable({ items }: InquiryTableProps) {
   return (
@@ -32,11 +34,9 @@ export function InquiryTable({ items }: InquiryTableProps) {
               <tr key={item.id}>
                 <td>
                   <p className="font-medium text-neutral-900">{item.resourceName}</p>
-<<<<<<< codex/develop-web-product-proposal-for-bamboo-industry-tavjxs
                   <p className="mt-1 text-sm text-neutral-500">编号：{item.id}</p>
-=======
-                  <p className="mt-1 text-xs text-neutral-500">编号：{item.id}</p>
->>>>>>> main
+                  <p className="mt-1 text-sm text-neutral-500">编号：{item.id}</p>
+main
                 </td>
                 <td>{item.initiator}</td>
                 <td>{item.counterparty}</td>
@@ -53,11 +53,9 @@ export function InquiryTable({ items }: InquiryTableProps) {
                         进入履约
                       </Link>
                     ) : (
-<<<<<<< codex/develop-web-product-proposal-for-bamboo-industry-tavjxs
                       <span className="text-sm text-neutral-500">待报价确认后可进入履约</span>
-=======
-                      <span className="text-xs text-neutral-500">待报价确认后可进入履约</span>
->>>>>>> main
+                      <span className="text-sm text-neutral-500">待报价确认后可进入履约</span>
+main
                     )}
                   </div>
                 </td>
@@ -66,9 +64,7 @@ export function InquiryTable({ items }: InquiryTableProps) {
           </tbody>
         </table>
       </div>
-      {items.length === 0 && (
-        <p className={workspaceStyles.tableEmpty}>{WORKSPACE_EMPTY_TEXT.filtered}</p>
-      )}
+      {items.length === 0 ? <p className={workspaceStyles.tableEmpty}>{WORKSPACE_EMPTY_TEXT.filtered}</p> : null}
     </section>
   );
 }

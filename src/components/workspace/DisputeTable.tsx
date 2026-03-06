@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { WORKSPACE_EMPTY_TEXT } from '@/constants/workspace';
 import type { DisputeRecord } from '@/constants/workspace';
-import { workspaceStyles } from './styles';
 import { DisputeStatusTag } from './DisputeStatusTag';
+import { workspaceStyles } from './styles';
 
 type DisputeTableProps = {
   items: readonly DisputeRecord[];
@@ -30,11 +30,9 @@ export function DisputeTable({ items }: DisputeTableProps) {
               <tr key={item.id}>
                 <td>
                   <p className="font-medium text-neutral-900">{item.relatedName}</p>
-<<<<<<< codex/develop-web-product-proposal-for-bamboo-industry-tavjxs
                   <p className="mt-1 text-sm text-neutral-500">关联编号：{item.relatedRef}</p>
-=======
-                  <p className="mt-1 text-xs text-neutral-500">关联编号：{item.relatedRef}</p>
->>>>>>> main
+                  <p className="mt-1 text-sm text-neutral-500">关联编号：{item.relatedRef}</p>
+main
                 </td>
                 <td>{item.disputeType}</td>
                 <td>{item.initiator}</td>
@@ -56,9 +54,7 @@ export function DisputeTable({ items }: DisputeTableProps) {
           </tbody>
         </table>
       </div>
-      {items.length === 0 && (
-        <p className={workspaceStyles.tableEmpty}>{WORKSPACE_EMPTY_TEXT.filtered}</p>
-      )}
+      {items.length === 0 ? <p className={workspaceStyles.tableEmpty}>{WORKSPACE_EMPTY_TEXT.filtered}</p> : null}
     </section>
   );
 }

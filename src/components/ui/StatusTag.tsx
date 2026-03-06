@@ -16,14 +16,12 @@ const toneClassMap: Record<StatusTagTone, string> = {
   info: 'border-[#c0d5cc] bg-[#e8f1ee] text-[#355f4d]'
 };
 
-const sizeClassMap = {
-<<<<<<< codex/develop-web-product-proposal-for-bamboo-industry-tavjxs
+const sizeClassMap: Record<NonNullable<StatusTagProps['size']>, string> = {
   sm: 'h-6 px-2.5 text-sm',
   md: 'h-7 px-3 text-sm'
-=======
-  sm: 'h-6 px-2 text-xs',
-  md: 'h-7 px-3 text-xs'
->>>>>>> main
+  sm: 'h-6 px-2.5 text-sm',
+  md: 'h-7 px-3 text-sm'
+main
 };
 
 export function StatusTag({ label, tone = 'neutral', size = 'md', className }: StatusTagProps) {
