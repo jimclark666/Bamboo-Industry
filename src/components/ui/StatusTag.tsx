@@ -19,6 +19,9 @@ const toneClassMap: Record<StatusTagTone, string> = {
 const sizeClassMap: Record<NonNullable<StatusTagProps['size']>, string> = {
   sm: 'h-6 px-2.5 text-sm',
   md: 'h-7 px-3 text-sm'
+  sm: 'h-6 px-2.5 text-sm',
+  md: 'h-7 px-3 text-sm'
+main
 };
 
 export function StatusTag({ label, tone = 'neutral', size = 'md', className }: StatusTagProps) {

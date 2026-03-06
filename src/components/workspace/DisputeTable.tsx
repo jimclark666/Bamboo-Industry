@@ -31,6 +31,8 @@ export function DisputeTable({ items }: DisputeTableProps) {
                 <td>
                   <p className="font-medium text-neutral-900">{item.relatedName}</p>
                   <p className="mt-1 text-sm text-neutral-500">关联编号：{item.relatedRef}</p>
+                  <p className="mt-1 text-sm text-neutral-500">关联编号：{item.relatedRef}</p>
+main
                 </td>
                 <td>{item.disputeType}</td>
                 <td>{item.initiator}</td>
