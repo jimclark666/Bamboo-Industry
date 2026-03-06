@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-brand-600: #4f7666;
+  --color-brand-500: #5f8777;
+  --color-brand-100: #dfece5;
+
+  --color-neutral-900: #1f2a24;
+  --color-neutral-700: #4b5a52;
+  --color-neutral-500: #8a978f;
+  --color-neutral-300: #d7ded9;
+  --color-neutral-100: #f6f8f7;
+  --color-white: #ffffff;
+
+  --color-state-success: #3f6f58;
+  --color-state-warning: #9a7c4a;
+  --color-state-danger: #a05a5a;
+  --color-state-info: #49697a;
+
+  --font-size-h1: 36px;
+  --font-size-h2: 28px;
+  --font-size-h3: 22px;
+  --font-size-body-lg: 16px;
+  --font-size-body-md: 14px;
+  --font-size-caption: 12px;
+
+  --line-height-h1: 44px;
+  --line-height-h2: 36px;
+  --line-height-h3: 30px;
+  --line-height-body-lg: 26px;
+  --line-height-body-md: 22px;
+  --line-height-caption: 18px;
+
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 2px 8px rgba(31, 42, 36, 0.04);
+  --shadow-md: 0 6px 20px rgba(31, 42, 36, 0.06);
+  --shadow-lg: 0 10px 30px rgba(31, 42, 36, 0.08);
+
+  --border-color-default: var(--color-neutral-300);
+  --border-color-strong: #c7d0ca;
+  --border-width-default: 1px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-neutral-100);
+  color: var(--color-neutral-900);
+  font-size: var(--font-size-body-md);
+  line-height: var(--line-height-body-md);
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    'Noto Sans',
+    'PingFang SC',
+    'Microsoft YaHei',
+    sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  min-height: calc(100vh - 72px - 300px);
+}
