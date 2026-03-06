@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { Suspense, useMemo, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { DashboardSection } from '@/components/workspace/DashboardSection';
 import { FilterBar } from '@/components/workspace/FilterBar';
@@ -23,7 +23,7 @@ const PAGE_ACTIONS = [
   { label: '履约规则', tone: 'secondary' }
 ] as const;
 
-export default function FulfillmentPage() {
+function FulfillmentPageContent() {
   const searchParams = useSearchParams();
   const linkedInquiryId = searchParams.get('inquiryId') ?? '';
 
@@ -92,5 +92,13 @@ export default function FulfillmentPage() {
         </ul>
       </DashboardSection>
     </div>
+  );
+}
+
+export default function FulfillmentPage() {
+  return (
+    <Suspense fallback={<div className="text-sm text-neutral-600">页面加载中...</div>}>
+      <FulfillmentPageContent />
+    </Suspense>
   );
 }

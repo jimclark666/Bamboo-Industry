@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { Suspense, useMemo, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { DashboardSection } from '@/components/workspace/DashboardSection';
 import { FilterBar } from '@/components/workspace/FilterBar';
@@ -24,7 +24,7 @@ const PAGE_ACTIONS = [
   { label: '治理策略说明', tone: 'secondary' }
 ] as const;
 
-export default function GovernancePage() {
+function GovernancePageContent() {
   const searchParams = useSearchParams();
   const linkedSubject = searchParams.get('subject') ?? '';
 
@@ -102,5 +102,13 @@ export default function GovernancePage() {
         </DashboardSection>
       </div>
     </div>
+  );
+}
+
+export default function GovernancePage() {
+  return (
+    <Suspense fallback={<div className="text-sm text-neutral-600">页面加载中...</div>}>
+      <GovernancePageContent />
+    </Suspense>
   );
 }

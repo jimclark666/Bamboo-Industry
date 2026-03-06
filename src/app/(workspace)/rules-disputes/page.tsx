@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { Suspense, useMemo, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { DashboardSection } from '@/components/workspace/DashboardSection';
 import { DisputeTable } from '@/components/workspace/DisputeTable';
@@ -24,7 +24,7 @@ const PAGE_ACTIONS = [
   { label: '查看平台规则', tone: 'secondary' }
 ] as const;
 
-export default function RulesDisputesPage() {
+function RulesDisputesPageContent() {
   const searchParams = useSearchParams();
   const linkedRef = searchParams.get('relatedRef') ?? '';
   const linkedKeyword = searchParams.get('keyword') ?? '';
@@ -106,5 +106,13 @@ export default function RulesDisputesPage() {
         </DashboardSection>
       </div>
     </div>
+  );
+}
+
+export default function RulesDisputesPage() {
+  return (
+    <Suspense fallback={<div className="text-sm text-neutral-600">页面加载中...</div>}>
+      <RulesDisputesPageContent />
+    </Suspense>
   );
 }

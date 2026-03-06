@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { Suspense, useMemo, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { DashboardSection } from '@/components/workspace/DashboardSection';
 import { FilterBar } from '@/components/workspace/FilterBar';
@@ -23,7 +23,7 @@ const PAGE_ACTIONS = [
   { label: '报价规则', tone: 'secondary' }
 ] as const;
 
-export default function InquiryQuotesPage() {
+function InquiryQuotesPageContent() {
   const searchParams = useSearchParams();
   const linkedResourceName = searchParams.get('resourceName') ?? '';
   const linkedKeyword = searchParams.get('keyword') ?? '';
@@ -94,5 +94,13 @@ export default function InquiryQuotesPage() {
         </ul>
       </DashboardSection>
     </div>
+  );
+}
+
+export default function InquiryQuotesPage() {
+  return (
+    <Suspense fallback={<div className="text-sm text-neutral-600">页面加载中...</div>}>
+      <InquiryQuotesPageContent />
+    </Suspense>
   );
 }
