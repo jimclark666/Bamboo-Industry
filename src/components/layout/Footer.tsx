@@ -4,7 +4,7 @@ import { SITE_NAME } from '@/constants/site';
 import { PageContainer } from './PageContainer';
 
 type FooterProps = {
-  columns: FooterColumn[];
+  columns: ReadonlyArray<FooterColumn>;
   copyright: string;
 };
 

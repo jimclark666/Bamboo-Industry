@@ -10,5 +10,5 @@ export type FooterLink = {
 
 export type FooterColumn = {
   title: string;
-  links: FooterLink[];
+  links: ReadonlyArray<FooterLink>;
 };
