@@ -1,8 +1,8 @@
 import { PageContainer } from '@/components/layout/PageContainer';
-import { AIReservedSection } from '@/components/home/AIReservedSection';
 import { HeroSection } from '@/components/home/HeroSection';
 import { RoleEntrySection } from '@/components/home/RoleEntrySection';
-import { TrustMechanismSection } from '@/components/home/TrustMechanismSection';
+import { RulesEntrySection } from '@/components/home/RulesEntrySection';
+import { SpeciesEntrySection } from '@/components/home/SpeciesEntrySection';
 import { ValueSection } from '@/components/home/ValueSection';
 
 export default function HomePage() {
@@ -11,8 +11,8 @@ export default function HomePage() {
       <HeroSection />
       <ValueSection />
       <RoleEntrySection />
-      <TrustMechanismSection />
-      <AIReservedSection />
+      <SpeciesEntrySection />
+      <RulesEntrySection />
     </PageContainer>
   );
 }

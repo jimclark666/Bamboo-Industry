@@ -1,18 +1,18 @@
 export const TOKENS = {
   color: {
-    brand600: '#4F7666',
-    brand500: '#5F8A79',
-    brand100: '#DCEDE5',
-    neutral900: '#1F2A24',
-    neutral700: '#4B5A52',
-    neutral500: '#8A978F',
-    neutral300: '#D7DED9',
-    neutral100: '#F6F8F7',
+    brand600: '#4f8a58',
+    brand500: '#64a36f',
+    brand100: '#d6efc4',
+    neutral900: '#1d2c22',
+    neutral700: '#455c4c',
+    neutral500: '#7b8f81',
+    neutral300: '#cfdbd1',
+    neutral100: '#f4f8ef',
     white: '#FFFFFF',
-    stateSuccess: '#3F6F58',
-    stateWarning: '#9A7C4A',
-    stateDanger: '#A05A5A',
-    stateInfo: '#4C6E7F'
+    stateSuccess: '#3f7a4a',
+    stateWarning: '#9a7c4a',
+    stateDanger: '#a05a5a',
+    stateInfo: '#4f7363'
   },
   radius: {
     sm: '8px',
@@ -21,8 +21,8 @@ export const TOKENS = {
     pill: '999px'
   },
   shadow: {
-    sm: '0 2px 8px rgba(31,42,36,0.04)',
-    md: '0 6px 20px rgba(31,42,36,0.06)',
-    lg: '0 10px 30px rgba(31,42,36,0.08)'
+    sm: '0 2px 8px rgba(29,44,34,0.04)',
+    md: '0 6px 20px rgba(29,44,34,0.06)',
+    lg: '0 10px 30px rgba(29,44,34,0.08)'
   }
 } as const;

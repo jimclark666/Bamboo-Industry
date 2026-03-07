@@ -3,21 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --color-brand-600: #4f7666;
-  --color-brand-500: #5f8a79;
-  --color-brand-100: #dcede5;
+  --color-brand-600: #4f8a58;
+  --color-brand-500: #64a36f;
+  --color-brand-100: #d6efc4;
 
-  --color-neutral-900: #1f2a24;
-  --color-neutral-700: #4b5a52;
-  --color-neutral-500: #8a978f;
-  --color-neutral-300: #d7ded9;
-  --color-neutral-100: #f6f8f7;
+  --color-neutral-900: #1d2c22;
+  --color-neutral-700: #455c4c;
+  --color-neutral-500: #7b8f81;
+  --color-neutral-300: #cfdbd1;
+  --color-neutral-100: #f4f8ef;
   --color-white: #ffffff;
 
-  --color-state-success: #3f6f58;
+  --color-state-success: #3f7a4a;
   --color-state-warning: #9a7c4a;
   --color-state-danger: #a05a5a;
-  --color-state-info: #4c6e7f;
+  --color-state-info: #4f7363;
 
   --font-size-h1: 36px;
   --font-size-h2: 28px;
@@ -48,12 +48,12 @@
   --radius-lg: 12px;
   --radius-pill: 999px;
 
-  --shadow-sm: 0 2px 8px rgba(31, 42, 36, 0.04);
-  --shadow-md: 0 6px 20px rgba(31, 42, 36, 0.06);
-  --shadow-lg: 0 10px 30px rgba(31, 42, 36, 0.08);
+  --shadow-sm: 0 2px 8px rgba(29, 44, 34, 0.04);
+  --shadow-md: 0 6px 20px rgba(29, 44, 34, 0.06);
+  --shadow-lg: 0 10px 30px rgba(29, 44, 34, 0.08);
 
   --border-color-default: var(--color-neutral-300);
-  --border-color-strong: #c7d0ca;
+  --border-color-strong: #c2d4c7;
   --border-width-default: 1px;
 }
 
