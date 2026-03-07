@@ -25,7 +25,23 @@ export const HOME_VALUE_ITEMS = [
   }
 ] as const;
 
-export const HOME_ROLE_ITEMS = [
+type RoleAction = {
+  label: string;
+  href: string;
+};
+
+export type RoleEntryItem = {
+  role: '竹农' | '竹企' | '管理员';
+  summary: string;
+  goal: string;
+  process: readonly string[];
+  responsibilities: readonly string[];
+  trustMechanism: string;
+  primaryAction: RoleAction;
+  secondaryAction?: RoleAction;
+};
+
+export const HOME_ROLE_ITEMS: readonly RoleEntryItem[] = [
   {
     role: '竹农',
     summary: '发布种源资源、响应询价并按节点推进履约，持续积累协作信用。',
